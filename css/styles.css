@@ -107,6 +107,45 @@ img {
 
 
 
+/* Mobile Menu - START ----------------------------------------------------- */
+.mobile-menu {
+  display: none; /* not displaying until being a smaller screen size - see media queries */
+}
+
+.navbar .mobile-menu-toggle {
+  color: #fff; /* setting text color to white */
+  cursor: pointer; /* see a pointer when hovering over */
+}
+
+.navbar .mobile-menu-items {
+  position: absolute; /* so we can position it into the place we want it to be */
+  top: 100%; /* 100% down from it's parent element */
+  left: 0; /* starts from the very left side of the browser screen */
+  width: 100%; /* 100% width of it's parent element */
+  background: rgba(0, 0, 0, 0.8); /* background color */
+  opacity: 0.95; /* making it a little more transparent */
+  padding: 3rem 2rem; /* 3rem top and bottom padding, 2rem right and left */
+  text-align: center; /* aligns the text to the center */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* adding a slight box-shadow */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* adding a slight border to the top */
+  transform: translateX(100%); /* moving the mobile menu items off the screen to the right */
+  transition: transform 0.3s ease; /* ease in transition for when we click the menu button */
+}
+
+.navbar .mobile-menu-items.active {
+  transform: translateX(0); /* moving the mobile menu items back to it's original place on the screen */
+}
+
+.navbar .mobile-menu-list {
+  display: flex; /* displaying flex so we can tweak the format of the list */
+  flex-direction: column; /* making the content into a column */
+  gap: 2rem; /* setting a gap to separate the items a little bit */
+  font-size: 1.2rem; /* making the font of the list items a little bigger */
+}
+/* Mobile Menu - END ----------------------------------------------------- */
+
+
+
 /* Media Queries - START ----------------------------------------------------- */
 @media (max-width: 1200px) {
 }
@@ -115,6 +154,18 @@ img {
 }
 
 @media (max-width: 768px) {
+  .main-menu-items {
+    display: none; /* makes the desktop nav items disappear so the mobile one can be used */
+  }
+
+  .navbar .mobile-menu {
+    display: block; /* displays the mobile menu */
+  }
+
+  .navbar .mobile-menu-toggle {
+    display: block; /* displays the hamburger menu */
+    padding: 10px; /* sets the padding on all sides to 10px */
+  }
 }
 
 @media (max-width: 576px) {

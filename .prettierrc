@@ -1,0 +1,6 @@
+{
+	"parser": "babel",
+	"htmlWhitespaceSensitivity": "ignore",
+	"proseWrap": "always",
+	"max-empty-lines": null
+}

@@ -1,0 +1,58 @@
+/* Base Styles - START */
+
+*,
+*::before,
+*::after {
+  /* Setting values to 0 to get rid of automatic margin and padding */
+  margin: 0;
+  padding: 0;
+  /* Border Box so width and height properties include entire box of content */
+  box-sizing: border-box;
+}
+
+/* Custom Properties */
+:root {
+  --primary-color: #fc5d66;
+  --secondary-color: #ffc05a;
+  --light-color: #f9fafb;
+  --dark-color: #272d35;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif; /* using Google font Open Sans */
+  line-height: 1.6; /* Making line height of text content 60% larger than the text itself */
+  scroll-behavior: smooth; /* scrolling smoothly when clicking a link to a different part of the page */
+}
+
+/* Getting rid of all the added text decoration and list styles that are automatic */
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* setting base style of all images to be max width of 100% of parent element */
+img {
+  max-width: 100%;
+}
+
+/* Base Styles - END */
+
+/* Media Queries - START */
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+}
+
+/* Media Queries - END */

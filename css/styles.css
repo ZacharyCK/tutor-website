@@ -2,275 +2,346 @@
 *,
 *::before,
 *::after {
-	/* Setting values to 0 to get rid of automatic margin and padding */
-	margin: 0;
-	padding: 0;
-	/* Border Box so width and height properties include entire box of content */
-	box-sizing: border-box;
+    /* Setting values to 0 to get rid of automatic margin and padding */
+    margin: 0;
+    padding: 0;
+    /* Border Box so width and height properties include entire box of content */
+    box-sizing: border-box;
 }
 
 /* Custom Properties */
 :root {
-	--primary-color: #fc5d66;
-	--secondary-color: #ffc05a;
-	--light-color: #f9fafb;
-	--dark-color: #272d35;
+    --primary-color: #fc5d66;
+    --secondary-color: #ffc05a;
+    --light-color: #f9fafb;
+    --dark-color: #272d35;
 }
 
 html,
 body {
-	font-family: "Open Sans", sans-serif; /* using Google font Open Sans */
-	line-height: 1.6; /* Making line height of text content 60% larger than the text itself */
-	scroll-behavior: smooth; /* scrolling smoothly when clicking a link to a different part of the page */
+    font-family: "Open Sans", sans-serif; /* using Google font Open Sans */
+    line-height: 1.6; /* Making line height of text content 60% larger than the text itself */
+    scroll-behavior: smooth; /* scrolling smoothly when clicking a link to a different part of the page */
 }
 
 /* Getting rid of all the added text decoration and list styles that are automatic */
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 ul {
-	list-style: none;
+    list-style: none;
 }
 
 /* setting base style of all images to be max width of 100% of parent element */
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 /* Base Styles - END ----------------------------------------------------- */
 
-
-
-
 /* Utility - START ----------------------------------------------------- */
 .container {
-	max-width: 1200px; /* content does not horizontally past 1200px */
-	margin: 0 auto; /* margin auto on left and right to center */
-	padding: 0 2rem; /* padding 2rem on left and right */
+    max-width: 1200px; /* content does not horizontally past 1200px */
+    margin: 0 auto; /* margin auto on left and right to center */
+    padding: 0 2rem; /* padding 2rem on left and right */
 }
 
 .container-sm {
-	max-width: 1000px; /* content does not horizontally past 1000px */
-	margin: 0 auto; /* margin auto on left and right to center */
-	padding: 0 2rem; /* padding 2rem on left and right */
+    max-width: 1000px; /* content does not horizontally past 1000px */
+    margin: 0 auto; /* margin auto on left and right to center */
+    padding: 0 2rem; /* padding 2rem on left and right */
 }
 
 .btn {
-  /* make the btn element an inline element but have the ability to style it like a block element */
-  display: inline-block; 
-  padding: 1.3rem 2.3rem; /* 1.6rem padding on top and bottom, 2.6rem on left and right */
-  border: 1px solid var(--secondary-color); /* making the border for each btn */
-  border-radius: 32px; /* curve the edges of each btn */
-  background: var(--secondary-color); /* set the background color of each btn */
-  color: var(--dark-color); /* set the color of the text of each btn */
-  cursor: pointer; /* change the cursor to a pointer when we hover over each btn */
-  transition: all 0.2s; /* setting a transition for each btn */
+    /* make the btn element an inline element but have the ability to style it like a block element */
+    display: inline-block;
+    padding: 1.3rem 2.3rem; /* 1.6rem padding on top and bottom, 2.6rem on left and right */
+    border: 1px solid var(--secondary-color); /* making the border for each btn */
+    border-radius: 32px; /* curve the edges of each btn */
+    background: var(
+        --secondary-color
+    ); /* set the background color of each btn */
+    color: var(--dark-color); /* set the color of the text of each btn */
+    cursor: pointer; /* change the cursor to a pointer when we hover over each btn */
+    transition: all 0.2s; /* setting a transition for each btn */
 }
 
 .btn:hover {
-  background: var(--primary-color); /* change to primary color when hovering over btn */
-  color: #fff; /* change text color to white when hovering over btn */
-  border-color: #fff; /* change border color to white when hovering over btn */
+    background: var(
+        --primary-color
+    ); /* change to primary color when hovering over btn */
+    color: #fff; /* change text color to white when hovering over btn */
+    border-color: #fff; /* change border color to white when hovering over btn */
+}
+
+.section-header {
+    max-width: 750px; /* does not expand past 750px */
+    margin: 0 auto; /* 0 margin on top and bottom and center from the sides with auto */
+    text-align: center; /* center the text */
+    margin-bottom: 3rem; /* margin on bottom to separate from content below */
+}
+
+.section-header h2 {
+    font-size: 2rem; /* making the font larger */
+    font-weight: 700; /* making the font bolder */
+    color: var(--dark-color); /* changing the font color */
+    margin-bottom: 0.5rem; /* making separation from the h2 and p in the section header */
+}
+
+.section-header p {
+    font-size: 1.3rem; /* increasing the size of the font */
+    color: var(--dark-color); /* changing the font color */
+}
+
+.heading-border {
+    width: 64px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 0 auto 2rem; /* margin 0 top and 2rem on bottom and auto left and right */
 }
 /* Utility - END ----------------------------------------------------- */
 
-
-
-
 /* Navbar - START ----------------------------------------------------- */
 .navbar {
-	background: transparent; /* background transparent so it blends in with the hero background color */
-  color: white;
-  padding: 1rem 2rem; /* 1rem padding top and bottom, 2rem padding left and right */
-  position: fixed; /* navbar will always be in the same place on the screen even when scrolling */
-  top: 0; /* placing the navbar at the very top of the screen */
-  right: 0;
-  left: 0;
-  z-index: 1000; /* ensures that it always overlays over other content on the screen */
-  transition: background-color 0.3s ease-in-out; /* for when we scroll - the background color will change */
+    background: transparent; /* background transparent so it blends in with the hero background color */
+    color: white;
+    padding: 1rem 2rem; /* 1rem padding top and bottom, 2rem padding left and right */
+    position: fixed; /* navbar will always be in the same place on the screen even when scrolling */
+    top: 0; /* placing the navbar at the very top of the screen */
+    right: 0;
+    left: 0;
+    z-index: 1000; /* ensures that it always overlays over other content on the screen */
+    transition: background-color 0.5s ease-in-out; /* for when we scroll - the background color will change */
+}
+
+.navbar.navbar-scroll {
+    background-color: rgba(
+        237,
+        77,
+        85,
+        0.8
+    ); /* color the navbar background will be when scrolling down the page */
+    backdrop-filter: blur(10px); /* bluring just the background of the navbar */
 }
 
 .navbar-flex {
-  display: flex; /* places the items in the navbar in a row format */
-  justify-content: space-between; /* puts a gap between the logo and the nav items list */
-  align-items: center; /* aligns the items on the secondary (y) axis */
+    display: flex; /* places the items in the navbar in a row format */
+    justify-content: space-between; /* puts a gap between the logo and the nav items list */
+    align-items: center; /* aligns the items on the secondary (y) axis */
 }
 
 .navbar img {
-  /* Making the logo smaller to fit in the navbar */
-  width: 81px;
-  height: 32px;
+    /* Making the logo smaller to fit in the navbar */
+    width: 81px;
+    height: 32px;
 }
 
 .navbar .main-menu-list {
-  display: flex; /* displays the list in the navbar as a row */
-  align-items: center; /* align items on the secondary (y) axis */
-  gap: 2rem; /* adds gap between elements in list */
-  font-weight: 600; /* Makes the font a little bolder */
+    display: flex; /* displays the list in the navbar as a row */
+    align-items: center; /* align items on the secondary (y) axis */
+    gap: 2rem; /* adds gap between elements in list */
+    font-weight: 600; /* Makes the font a little bolder */
 }
 
 .navbar a {
-  color: #fff; /* changing navbar links to white */
+    color: #fff; /* changing navbar links to white */
 }
 
 .navbar a:hover {
-  color: var(--secondary-color); /* change color when hovering over nav links */
+    color: var(
+        --secondary-color
+    ); /* change color when hovering over nav links */
 }
 
 .navbar i {
-  font-size: 1.5rem; /* making the social media icons in the navbar bigger */
+    font-size: 1.5rem; /* making the social media icons in the navbar bigger */
 }
 /* Navbar - END ----------------------------------------------------- */
 
-
-
-
 /* Hero - START ----------------------------------------------------- */
 .hero {
-  background: #000 url("../images/header-background.jpg") center center/cover no-repeat; /* setting the hero background */
-  padding: 11.5rem 2rem 8rem; /* padding 11.5rem on top, 8rem on the bottom and 2rem on the sides */
-  color: #fff; /* text color is white */
-  overflow-x: hidden; /* take out any scrollbar on the horizontal axis */
-  position: relative;
+    background: #000 url("../images/header-background.jpg") center center/cover
+        no-repeat; /* setting the hero background */
+    padding: 11.5rem 2rem 8rem; /* padding 11.5rem on top, 8rem on the bottom and 2rem on the sides */
+    color: #fff; /* text color is white */
+    overflow-x: hidden; /* take out any scrollbar on the horizontal axis */
+    position: relative;
 }
 
 .hero .hero-flex {
-  display: flex; /* places the content in the class in a row format */
-  justify-content: space-between; /* puts space between the content of the flex container */
-  align-items: center; /* center the items in the flex container on the secondary axis */
-  gap: 6rem; /* put 6rem worth of space between the items in the flex box */
-  padding-bottom: 8rem; /* 8rem padding on the bottom */
+    display: flex; /* places the content in the class in a row format */
+    justify-content: space-between; /* puts space between the content of the flex container */
+    align-items: center; /* center the items in the flex container on the secondary axis */
+    gap: 6rem; /* put 6rem worth of space between the items in the flex box */
+    padding-bottom: 8rem; /* 8rem padding on the bottom */
 }
 
 .hero h1 {
-  font-size: 3.5rem; /* Increase the size of the header text to 350% */
-  line-height: 1.2; /* Make the line height 20% larger than the text itself */
-  font-weight: 700; /* make the text bolder */
-  margin-bottom: 1rem; /* Spacing the header text from the text below it */
+    font-size: 3.5rem; /* Increase the size of the header text to 350% */
+    line-height: 1.2; /* Make the line height 20% larger than the text itself */
+    font-weight: 700; /* make the text bolder */
+    margin-bottom: 1rem; /* Spacing the header text from the text below it */
 }
 
 .hero p {
-  font-size: 1.2rem; /* makes the font size 20% larger than normal */
-  margin-bottom: 2rem; /* spaces this element from it's sibling element below it */
-  line-height: 1.8; /* increasing the height of the lines in the paragraph element */
-  font-weight: 400; /* changing the weight of the font */
+    font-size: 1.2rem; /* makes the font size 20% larger than normal */
+    margin-bottom: 2rem; /* spaces this element from it's sibling element below it */
+    line-height: 1.8; /* increasing the height of the lines in the paragraph element */
+    font-weight: 400; /* changing the weight of the font */
 }
 
 .hero img {
-  width: 100%; /* making the width 100% of it's container */
-  margin-right: -100px; /* pushing the image more towards the edge of the window */
+    width: 100%; /* making the width 100% of it's container */
+    margin-right: -100px; /* pushing the image more towards the edge of the window */
 }
 
 .hero .frame-decoration {
-  position: absolute; /* positioning our svg as absolute */
-  bottom: 0; /* setting bottom and left to 0 to rest on edge of window */
-  left: 0; 
-  width: 100%; /* setting width to 100% to stretch across the whole window */
-  height: 100px; /* setting height to be 100px */
+    position: absolute; /* positioning our svg as absolute */
+    bottom: 0; /* setting bottom and left to 0 to rest on edge of window */
+    left: 0;
+    width: 100%; /* setting width to 100% to stretch across the whole window */
+    height: 100px; /* setting height to be 100px */
 }
 /* Hero - END ------------------------------------------------------- */
 
-
-
-
 /* Mobile Menu - START ----------------------------------------------------- */
 .mobile-menu {
-  display: none; /* not displaying until being a smaller screen size - see media queries */
+    display: none; /* not displaying until being a smaller screen size - see media queries */
 }
 
 .navbar .mobile-menu-toggle {
-  color: #fff; /* setting text color to white */
-  cursor: pointer; /* see a pointer when hovering over */
+    color: #fff; /* setting text color to white */
+    cursor: pointer; /* see a pointer when hovering over */
 }
 
 .navbar .mobile-menu-items {
-  position: absolute; /* so we can position it into the place we want it to be */
-  top: 100%; /* 100% down from it's parent element */
-  left: 0; /* starts from the very left side of the browser screen */
-  width: 100%; /* 100% width of it's parent element */
-  background: rgba(0, 0, 0, 0.8); /* background color */
-  opacity: 0.95; /* making it a little more transparent */
-  padding: 3rem 2rem; /* 3rem top and bottom padding, 2rem right and left */
-  text-align: center; /* aligns the text to the center */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* adding a slight box-shadow */
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* adding a slight border to the top */
-  transform: translateX(100%); /* moving the mobile menu items off the screen to the right */
-  transition: transform 0.3s ease; /* ease in transition for when we click the menu button */
+    position: absolute; /* so we can position it into the place we want it to be */
+    top: 100%; /* 100% down from it's parent element */
+    left: 0; /* starts from the very left side of the browser screen */
+    width: 100%; /* 100% width of it's parent element */
+    background: rgba(0, 0, 0, 0.8); /* background color */
+    opacity: 0.95; /* making it a little more transparent */
+    padding: 3rem 2rem; /* 3rem top and bottom padding, 2rem right and left */
+    text-align: center; /* aligns the text to the center */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* adding a slight box-shadow */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* adding a slight border to the top */
+    transform: translateX(
+        100%
+    ); /* moving the mobile menu items off the screen to the right */
+    transition: transform 0.3s ease; /* ease in transition for when we click the menu button */
 }
 
 .navbar .mobile-menu-items.active {
-  transform: translateX(0); /* moving the mobile menu items back to it's original place on the screen */
+    transform: translateX(
+        0
+    ); /* moving the mobile menu items back to it's original place on the screen */
 }
 
 .navbar .mobile-menu-list {
-  display: flex; /* displaying flex so we can tweak the format of the list */
-  flex-direction: column; /* making the content into a column */
-  gap: 2rem; /* setting a gap to separate the items a little bit */
-  font-size: 1.2rem; /* making the font of the list items a little bigger */
+    display: flex; /* displaying flex so we can tweak the format of the list */
+    flex-direction: column; /* making the content into a column */
+    gap: 2rem; /* setting a gap to separate the items a little bit */
+    font-size: 1.2rem; /* making the font of the list items a little bigger */
 }
 /* Mobile Menu - END ----------------------------------------------------- */
 
+/* Learn Topics - START ----------------------------------------------------- */
+.topics {
+    /* Making the grid for the topics section */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
 
+.topics img {
+    transition: transform 0.3s; /* setting transition for hover effect to be smoother */
+}
+
+.topics img:hover {
+    transform: scale(
+        1.1
+    ); /* hover effect to enlarge image when being hovered over */
+}
+
+.topic h3 {
+    /* styling the caption per topic */
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+/* Learn Topics - END ----------------------------------------------------- */
 
 /* Media Queries - START ----------------------------------------------------- */
 @media (max-width: 1200px) {
-  .hero .hero-flex {
-    gap: 2rem; /* lower the gap between items to fit smaller screen */
-  }
+    .hero .hero-flex {
+        gap: 2rem; /* lower the gap between items to fit smaller screen */
+    }
 
-  .hero img {
-    max-width: 500px; /* makes image smaller for smaller screen */
-    margin-right: 0; /* takes margin away so image fits in screen */
-  }
+    .hero img {
+        max-width: 500px; /* makes image smaller for smaller screen */
+        margin-right: 0; /* takes margin away so image fits in screen */
+    }
 
-  .hero h1 {
-    font-size: 3rem; /* makes text size smaller for smaller screen */
-  }
+    .hero h1 {
+        font-size: 3rem; /* makes text size smaller for smaller screen */
+    }
+
+    .topics {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 992px) {
-  .hero {
-    text-align: center; /* center the text to look better on smaller screens */
-  }
+    .hero {
+        text-align: center; /* center the text to look better on smaller screens */
+    }
 
-  .hero .hero-flex {
-    flex-direction: column; /* put content into column format to look better on smaller screens */
-    padding-bottom: 4rem; /* shortens the padding bottom */
-  }
+    .hero .hero-flex {
+        flex-direction: column; /* put content into column format to look better on smaller screens */
+        padding-bottom: 4rem; /* shortens the padding bottom */
+    }
 
-  .hero img {
-    max-width: 600px;
-    margin-top: 2rem;
-  }
+    .hero img {
+        max-width: 600px; /* setting image to certain size based on screen size */
+        margin-top: 2rem; /* 2rem margin top to space between the image and the element above it */
+    }
+
+    .topics {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
-  .main-menu-items {
-    display: none; /* makes the desktop nav items disappear so the mobile one can be used */
-  }
+    .main-menu-items {
+        display: none; /* makes the desktop nav items disappear so the mobile one can be used */
+    }
 
-  .navbar .mobile-menu {
-    display: block; /* displays the mobile menu */
-  }
+    .navbar .mobile-menu {
+        display: block; /* displays the mobile menu */
+    }
 
-  .navbar .mobile-menu-toggle {
-    display: block; /* displays the hamburger menu */
-    padding: 10px; /* sets the padding on all sides to 10px */
-  }
+    .navbar .mobile-menu-toggle {
+        display: block; /* displays the hamburger menu */
+        padding: 10px; /* sets the padding on all sides to 10px */
+    }
 }
 
 @media (max-width: 576px) {
-  .hero {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
+    .hero {
+        padding-right: 0.5rem; /* decreasing padding on right and left for smaller screens */
+        padding-left: 0.5rem;
+    }
 
-  .hero h1 {
-    font-size: 2.5rem;
-  }
+    .hero h1 {
+        font-size: 2.5rem; /* decreasing font size for smaller screens */
+    }
 
-  .hero img {
-    max-width: 350px;
-  }
+    .hero img {
+        max-width: 350px; /* decreasing image size for smaller screens */
+    }
+
+    .topics {
+        grid-template-columns: 1fr;
+    }
 }
 /* Media Queries - END ----------------------------------------------------- */

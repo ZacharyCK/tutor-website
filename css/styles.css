@@ -42,7 +42,7 @@ img {
 
 
 
-/* Container - START ----------------------------------------------------- */
+/* Utility - START ----------------------------------------------------- */
 .container {
 	max-width: 1200px; /* content does not horizontally past 1200px */
 	margin: 0 auto; /* margin auto on left and right to center */
@@ -54,14 +54,32 @@ img {
 	margin: 0 auto; /* margin auto on left and right to center */
 	padding: 0 2rem; /* padding 2rem on left and right */
 }
-/* Container - END ----------------------------------------------------- */
+
+.btn {
+  /* make the btn element an inline element but have the ability to style it like a block element */
+  display: inline-block; 
+  padding: 1.6rem 2.6rem; /* 1.6rem padding on top and bottom, 2.6rem on left and right */
+  border: 1px solid var(--secondary-color); /* making the border for each btn */
+  border-radius: 32px; /* curve the edges of each btn */
+  background: var(--secondary-color); /* set the background color of each btn */
+  color: var(--dark-color); /* set the color of the text of each btn */
+  cursor: pointer; /* change the cursor to a pointer when we hover over each btn */
+  transition: all 0.2s; /* setting a transition for each btn */
+}
+
+.btn:hover {
+  background: var(--primary-color); /* change to primary color when hovering over btn */
+  color: #fff; /* change text color to white when hovering over btn */
+  border-color: #fff; /* change border color to white when hovering over btn */
+}
+/* Utility - END ----------------------------------------------------- */
 
 
 
 
 /* Navbar - START ----------------------------------------------------- */
 .navbar {
-	background: black;
+	background: transparent; /* background transparent so it blends in with the hero background color */
   color: white;
   padding: 1rem 2rem; /* 1rem padding top and bottom, 2rem padding left and right */
   position: fixed; /* navbar will always be in the same place on the screen even when scrolling */
@@ -103,6 +121,46 @@ img {
   font-size: 1.5rem; /* making the social media icons in the navbar bigger */
 }
 /* Navbar - END ----------------------------------------------------- */
+
+
+
+
+/* Hero - START ----------------------------------------------------- */
+.hero {
+  background: #000 url("../images/header-background.jpg") center center/cover no-repeat; /* setting the hero background */
+  padding: 11.5rem 2rem 8rem; /* padding 11.5rem on top, 8rem on the bottom and 2rem on the sides */
+  color: #fff; /* text color is white */
+  overflow-x: hidden; /* take out any scrollbar on the horizontal axis */
+  position: relative;
+}
+
+.hero .hero-flex {
+  display: flex; /* places the content in the class in a row format */
+  justify-content: space-between; /* puts space between the content of the flex container */
+  align-items: center; /* center the items in the flex container on the secondary axis */
+  gap: 6rem; /* put 6rem worth of space between the items in the flex box */
+  padding-bottom: 8rem; /* 8rem padding on the bottom */
+}
+
+.hero h1 {
+  font-size: 3.5rem; /* Increase the size of the header text to 350% */
+  line-height: 1.2; /* Make the line height 20% larger than the text itself */
+  font-weight: 700; /* make the text bolder */
+  margin-bottom: 1rem; /* Spacing the header text from the text below it */
+}
+
+.hero p {
+  font-size: 1.2rem; /* makes the font size 20% larger than normal */
+  margin-bottom: 2rem; /* spaces this element from it's sibling element below it */
+  line-height: 1.8; /* increasing the height of the lines in the paragraph element */
+  font-weight: 400; /* changing the weight of the font */
+}
+
+.hero img {
+  width: 100%; /* making the width 100% of it's container */
+  margin-right: -100px; /* pushing the image more towards the edge of the window */
+}
+/* Hero - END ------------------------------------------------------- */
 
 
 

@@ -341,6 +341,48 @@ img {
 }
 /* Summary - END ----------------------------------------------------- */
 
+/* Info Section - START ----------------------------------------------------- */
+.info-container {
+    /* set the background image for the info container */
+    background: url(../images/audience.jpg) top center/cover no-repeat;
+    display: flex; /* make the info container a flex box container */
+}
+
+.info-content {
+    background-color: var(
+        --primary-color
+    ); /* set the background color to the primary color */
+    color: #fff; /* set the text color of white */
+    flex: 1; /* takes up the remainer of the space in the flex box */
+    padding: 4rem; /* 4rem padding on all sides */
+}
+
+.info-content h2 {
+    font-size: 2rem; /* making the size of the font larger */
+    margin-bottom: 1rem; /* putting a margin on the bottom */
+    font-weight: 700; /* making the text bolder */
+}
+
+.info-content p {
+    font-size: 1.2rem; /* making the text larger */
+    margin-bottom: 2rem; /* 2rem margin to the bottom */
+}
+
+.info-content ul li {
+    font-size: 1.2rem; /* making the font size a little bit larger */
+    line-height: 2; /* increasing the line height */
+}
+
+.info-content i {
+    margin-right: 0.5rem; /* pushes the text over from the checks a little bit */
+    color: var(--secondary-color); /* checks are the secondary color */
+}
+
+.info-left {
+    width: 50%; /* giving the left div in the info container to 50% */
+}
+/* Info Section - END ----------------------------------------------------- */
+
 /* Media Queries - START ----------------------------------------------------- */
 @media (max-width: 1200px) {
     .hero .hero-flex {
@@ -400,6 +442,26 @@ img {
     .navbar .mobile-menu-toggle {
         display: block; /* displays the hamburger menu */
         padding: 10px; /* sets the padding on all sides to 10px */
+    }
+
+    .info-container {
+        flex-direction: column; /* making the direction a column for smaller screens */
+    }
+
+    .info-content {
+        padding: 2rem; /* decreasing the padding for the info content */
+    }
+
+    .info-content h2 {
+        font-size: 1.5rem; /* making font size smaller for the info header */
+    }
+
+    .info-content p {
+        font-size: 1rem; /* making sont size smaller for info paragraph text */
+    }
+
+    .info-left {
+        display: none; /* making the left container disappear so the content can be the only one to display */
     }
 }
 

@@ -74,6 +74,10 @@ img {
     border-color: #fff; /* change border color to white when hovering over btn */
 }
 
+.section {
+    margin: 4rem 0; /* putting margin 4rem on top and bottom */
+}
+
 .section-header {
     max-width: 750px; /* does not expand past 750px */
     margin: 0 auto; /* 0 margin on top and bottom and center from the sides with auto */
@@ -98,6 +102,17 @@ img {
     height: 4px;
     background: var(--primary-color);
     margin: 0 auto 2rem; /* margin 0 top and 2rem on bottom and auto left and right */
+}
+
+.card {
+    display: flex; /* making the card container a flex container */
+    flex-direction: column; /* putting the content in column format - top to bottom */
+    align-items: center; /* centering items on secondary (x) axis */
+    justify-content: center; /* centering items on main (y) axis */
+    text-align: center; /* centering the text in the container */
+    padding: 2rem 1.75rem; /* 2rem padding on top and bottom and 1.75rem left and right */
+    background: #fff; /* ensuring the background of every card is white */
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3); /* setting box shadow to lift it off the screen */
 }
 /* Utility - END ----------------------------------------------------- */
 
@@ -271,6 +286,26 @@ img {
 }
 /* Learn Topics - END ----------------------------------------------------- */
 
+/* Chapter Cards - START ----------------------------------------------------- */
+.chapter-cards {
+    display: grid; /* using a grid for the chapter cards */
+    grid-template-columns: repeat(3, 1fr); /* making columns of 3 */
+    gap: 2rem; /* 2rem gap between elements in the grid */
+    padding: 1rem 0 4rem; /* padding 1rem on top and 4rem on bottom */
+}
+
+.chapter-cards img {
+    width: 130px; /* making the card images smaller, to 130 px */
+    margin-top: 1rem; /* putting a 1rem margin top */
+}
+
+.chapter-cards h3 {
+    font-size: 1.25rem; /* increasing the size of the font */
+    font-weight: 700; /* boldening the font */
+    margin: 1rem 0; /* 1rem margin to the top and bottom */
+}
+/* Chapter Cards - END ----------------------------------------------------- */
+
 /* Media Queries - START ----------------------------------------------------- */
 @media (max-width: 1200px) {
     .hero .hero-flex {
@@ -307,7 +342,14 @@ img {
     }
 
     .topics {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(
+            2,
+            1fr
+        ); /* make it to columns for smaller screens */
+    }
+
+    .chapter-cards {
+        grid-template-columns: 1fr; /* stack the cards into one columns for smaller screens */
     }
 }
 

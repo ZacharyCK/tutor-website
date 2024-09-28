@@ -306,6 +306,41 @@ img {
 }
 /* Chapter Cards - END ----------------------------------------------------- */
 
+/* Summary - START ----------------------------------------------------- */
+.summary {
+    background-color: var(
+        --light-color
+    ); /* set background color of section to light grey */
+    color: var(--dark-color); /* setting the color of the text in section */
+    padding: 4rem 2rem 5rem; /* 4rem padding on top, 2rem padding on sides, 5rem padding on bottom */
+}
+
+.summary .section-lists {
+    background: #fff; /* setting the background to white */
+    padding: 2rem; /* padding on all sides to 2rem */
+}
+
+.summary .list-header {
+    background: var(
+        --primary-color
+    ); /* set background color to our primary color */
+    color: #fff; /* setting color of text to white */
+    padding: 0.5rem 1rem; /* setting padding top and bottom and left and right */
+    font-size: 1.2rem; /* increasing the size of the font */
+    font-weight: 700; /* making the weight of the font bolder */
+    margin: 1rem 0; /* 1rem margin top and bottom and 0 left and right */
+}
+
+.summary .list-item {
+    padding: 1.4rem 0; /* 1.4rem padding on top and bottom and 0 left and right */
+    border-bottom: 1px solid #f1f4f6;
+}
+
+.summary .list-item:last-child {
+    border-bottom: none;
+}
+/* Summary - END ----------------------------------------------------- */
+
 /* Media Queries - START ----------------------------------------------------- */
 @media (max-width: 1200px) {
     .hero .hero-flex {
@@ -384,6 +419,10 @@ img {
 
     .topics {
         grid-template-columns: 1fr;
+    }
+
+    .summary .container {
+        padding: 0; /* eliminates padding for small screens to be more readable */
     }
 }
 /* Media Queries - END ----------------------------------------------------- */

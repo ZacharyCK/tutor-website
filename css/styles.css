@@ -74,6 +74,14 @@ img {
     border-color: #fff; /* change border color to white when hovering over btn */
 }
 
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
 .section {
     margin: 4rem 0; /* putting margin 4rem on top and bottom */
 }
@@ -383,6 +391,24 @@ img {
 }
 /* Info Section - END ----------------------------------------------------- */
 
+/* Takeaways - START ----------------------------------------------------- */
+.takeaways-cards {
+    display: grid; /* making the takeaways card container a grid */
+    grid-template-columns: repeat(3, 1fr); /* grid has 3 columns */
+    gap: 2rem; /* 2rem space between the cards in the grid */
+    padding: 1.5rem 0; /* 1.5rem padding on top and bottom */
+}
+
+.takeaways-cards .card {
+    flex-direction: row; /* making the the content in each card a row format */
+    text-align: left; /* aligning the text to the left */
+}
+
+.takeaways-cards .card i {
+    margin-right: 1rem; /* adding a margin to the right of the icon */
+}
+/* Takeaways - END ----------------------------------------------------- */
+
 /* Media Queries - START ----------------------------------------------------- */
 @media (max-width: 1200px) {
     .hero .hero-flex {
@@ -427,6 +453,10 @@ img {
 
     .chapter-cards {
         grid-template-columns: 1fr; /* stack the cards into one columns for smaller screens */
+    }
+
+    .takeaways-cards {
+        grid-template-columns: 1fr; /* stack the cards into one column in the takeaway section */
     }
 }
 

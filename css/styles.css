@@ -453,6 +453,63 @@ img {
 }
 /* Details - END ----------------------------------------------------- */
 
+/* Stats - START ----------------------------------------------------- */
+.stats {
+    /* set background image for stats section */
+    background: #000 url("../images/stats-background.jpg") center center/cover
+        no-repeat;
+    color: #fff; /* setting the text color to white */
+}
+
+.stats-flex {
+    display: flex; /* place into a flex container */
+    justify-content: space-between; /* to put space between flex items */
+    align-items: center; /* centering items on the secondary (y) axis */
+    padding: 4rem 2rem; /* 4rem padding on top and bottom and 2rem on sides */
+}
+
+.stats img {
+    width: 100%;
+    max-width: 500px; /* image does not go above 500px width */
+}
+
+.stats-content {
+    max-width: 500px; /* sets max width to only 500px */
+}
+
+.stats .stats-numbers {
+    display: flex; /* make stats numbers container into a flex container */
+    gap: 2rem; /* adding space between items in the stats numbers container */
+    margin: 2rem 0; /* 2rem spacing on top and bottom */
+    text-align: center; /* aligns text to center */
+    justify-content: center; /* centers content on main (x) axis */
+    align-items: center; /* center items on secondary (y) axis */
+    flex-wrap: wrap; /* wraps content */
+}
+
+.stats .stats-numbers h3 {
+    font-size: 3rem; /* increasing size of font to 3rem */
+    font-weight: 700; /* making the text bolder */
+}
+
+.stats .stats-numbers p {
+    font-size: 0.8rem; /* making the text smaller */
+}
+
+.stats .stats-text {
+    font-size: 1.2rem; /* increase the size of the text */
+    margin-bottom: 2rem; /* 2rem margin on the bottom */
+    text-align: center; /* aligns the text to the center */
+}
+
+.stats .btn {
+    display: block; /* display as block level element */
+    margin: 0 auto; /* center with margin on the sides */
+    text-align: center; /* center the text */
+    width: 200px; /* 200px width for the button */
+}
+/* Stats - END ----------------------------------------------------- */
+
 /* Media Queries - START ----------------------------------------------------- */
 @media (max-width: 1200px) {
     .hero .hero-flex {
@@ -495,23 +552,22 @@ img {
         ); /* make it to columns for smaller screens */
     }
 
-    .chapter-cards {
+    .chapter-cards,
+    .takeaways-cards {
         grid-template-columns: 1fr; /* stack the cards into one columns for smaller screens */
     }
 
-    .takeaways-cards {
-        grid-template-columns: 1fr; /* stack the cards into one column in the takeaway section */
-    }
-
     .details-flex,
-    .details + .details .details-flex {
+    .details + .details .details-flex,
+    .stats .stats-flex {
         flex-direction: column;
         gap: 2rem;
     }
 }
 
 @media (max-width: 768px) {
-    .main-menu-items {
+    .main-menu-items,
+    .info-left {
         display: none; /* makes the desktop nav items disappear so the mobile one can be used */
     }
 
@@ -539,10 +595,6 @@ img {
     .info-content p {
         font-size: 1rem; /* making sont size smaller for info paragraph text */
     }
-
-    .info-left {
-        display: none; /* making the left container disappear so the content can be the only one to display */
-    }
 }
 
 @media (max-width: 576px) {
@@ -565,6 +617,10 @@ img {
 
     .summary .container {
         padding: 0; /* eliminates padding for small screens to be more readable */
+    }
+
+    .stats .stats-numbers {
+        flex-direction: column;
     }
 }
 /* Media Queries - END ----------------------------------------------------- */

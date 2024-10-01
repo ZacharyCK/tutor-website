@@ -510,6 +510,44 @@ img {
 }
 /* Stats - END ----------------------------------------------------- */
 
+/* Newsletter - START ----------------------------------------------------- */
+.newsletter {
+    text-align: center; /* align all text within this class to the center */
+    margin: 0 2rem; /* 2rem margin on the left and right */
+}
+
+.newsletter-flex {
+    display: flex; /* making this a flex container */
+    gap: 1rem;
+    flex-direction: column; /* formatting this flex container as a column */
+    justify-content: center; /* center content on the main (x) axis */
+    align-items: center; /* center content on the secondary (y) axis */
+    background: var(
+        --light-color
+    ); /* set background color to the light color variable */
+    border: 1px solid #eee; /* set the border of the newsletter flex box */
+    padding: 4rem 2rem; /* 4rem padding top and bottom, 2rem padding left and right */
+}
+
+.newsletter h2 {
+    font-size: 2rem; /* increasing the font size of the heading of this section */
+    font-weight: 700; /* making the text a little bolder */
+}
+
+.newsletter p {
+    max-width: 600px; /* limits the width to only go 600px wide */
+}
+
+.newsletter input[type="email"] {
+    padding: 1rem 2rem; /* 1rem padding top and bottom, 2rem padding left and right */
+    border: 1px solid #ccc; /* adding a light border to the email input box */
+    border-radius: 32px; /* creates curved edges to the email input box */
+    width: 100%; /* make the width of the email input box 100% */
+    max-width: 400px; /* email input box cannot go beyond 400px wide */
+    margin: 1rem 0; /* 1rem top and bottom to separate it from other elements */
+}
+/* Newsletter - END ----------------------------------------------------- */
+
 /* Media Queries - START ----------------------------------------------------- */
 @media (max-width: 1200px) {
     .hero .hero-flex {
@@ -621,6 +659,14 @@ img {
 
     .stats .stats-numbers {
         flex-direction: column;
+    }
+
+    .newsletter h2 {
+        font-size: 1.5rem; /* makes the font size a little smaller for newsletter section heading */
+    }
+
+    .newsletter p {
+        display: none; /* hide the paragraph in the newsletter section for better design */
     }
 }
 /* Media Queries - END ----------------------------------------------------- */

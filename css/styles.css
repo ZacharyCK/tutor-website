@@ -124,6 +124,7 @@ img {
 }
 /* Utility - END ----------------------------------------------------- */
 
+/* Home Page - START ----------------------------------------------------- */
 /* Navbar - START ----------------------------------------------------- */
 .navbar {
     background: transparent; /* background transparent so it blends in with the hero background color */
@@ -607,6 +608,83 @@ img {
     color: var(--secondary-color);
 }
 /* Footer - END ----------------------------------------------------- */
+/* Home Page - END ----------------------------------------------------- */
+
+/* Contact Page - START ----------------------------------------------------- */
+/* Inner Header - START ----------------------------------------------------- */
+.inner-header {
+    background: var(--primary-color); /* background color change */
+    color: #fff; /* changing text color to white */
+    height: 250px; /* increasing the height of the section */
+    padding-top: 8rem; /* add 8rem padding top */
+}
+
+.inner-header h1 {
+    font-size: 2.5rem; /* increasing size of the font */
+    font-weight: 700; /* making the text a little bolder */
+    margin-bottom: 1rem; /* 1rem margin on the bottom */
+}
+/* Inner Header - END ----------------------------------------------------- */
+
+/* Contact Form - START ----------------------------------------------------- */
+.contact-form p {
+    margin-bottom: 3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: inherit; /* inherits font family from it's parent elements */
+    font-size: medium;
+    display: block; /* puts the elements on their own line */
+    width: 100%; /* makes width 100% of it's container */
+    margin: 1.5rem 0; /* 1.5rem margin on top and bottom */
+    border: 1px solid #ccc; /* make a light grey border */
+    padding: 1.2rem 1rem; /* 1.2rem padding top and bottom, 1rem padding left and right */
+}
+
+.contact-form textarea {
+    height: 200px; /* increase the size of the text area box */
+}
+
+.contact-form .btn {
+    display: block; /* make the button a block level element */
+    width: 100%; /* width 100% of it's container */
+    font-size: inherit; /* inerit font size from it's parent element */
+    font-family: inherit;
+    margin: 0 auto; /* center button horizontally */
+}
+/* Contact Form - END ----------------------------------------------------- */
+
+/* Location - START ----------------------------------------------------- */
+.location h2 {
+    font-size: 2rem; /* increasing the size of the heading */
+    font-weight: 700; /* making the heading bolder */
+    margin-bottom: 1rem; /* adding a margin to the bottom */
+}
+
+.location p {
+    margin-bottom: 2rem;
+}
+
+.location .map {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    margin-bottom: 3rem;
+    padding-bottom: 50%;
+    border-radius: 0.25rem;
+}
+
+.location .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/* Location - END ----------------------------------------------------- */
+/* Contact Page - END ----------------------------------------------------- */
 
 /* Media Queries - START ----------------------------------------------------- */
 @media (max-width: 1200px) {

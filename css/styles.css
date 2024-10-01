@@ -548,6 +548,66 @@ img {
 }
 /* Newsletter - END ----------------------------------------------------- */
 
+/* Social - START ----------------------------------------------------- */
+.social {
+    background: var(--dark-color); /* setting the background color */
+    color: #fff; /* setting the color oof the text */
+    padding: 6rem 2rem; /* 6rem padding top and bottom, 2rem left and right */
+    text-align: center; /* centering the text to the center */
+    font-size: 1.7rem; /* increasing the font size */
+    margin-bottom: 0; /* take away the margin on the bottom so it sits flush to the footer */
+}
+
+.social a {
+    color: #fff; /* making the color of the social media icons white */
+}
+
+.social a:hover {
+    color: var(--secondary-color);
+}
+
+.social p {
+    margin-bottom: 2rem; /* separating the social media paragraph from the icons */
+}
+
+.social .social-icons {
+    display: flex; /* make container holding the social media icons a flex container */
+    justify-content: center; /* centering the content on the main (x) axis */
+    gap: 1rem; /* putting small gap between the social media icons */
+    margin-top: 2rem; /* giving a margin top to separate from the element from above */
+}
+/* Social - END ----------------------------------------------------- */
+
+/* Footer - START ----------------------------------------------------- */
+.footer {
+    background: var(--dark-color); /* make background color dark */
+    color: #fff; /* making the text color white */
+    border-top: 1px solid #384653; /* adding border to separate it from the social section */
+    padding: 0.5rem 2rem; /* 0.5rem padding on top and bottom, 2rem left and right */
+}
+
+.footer-flex {
+    display: flex; /* make the content into a flex container */
+    justify-content: space-between; /* space between each element on the main (x) axis */
+    align-items: center; /* center elements on the secondary (y) axis */
+}
+
+.footer ul {
+    display: flex; /* makes the ul into a flex container */
+    justify-content: center; /* centers the content on the main (x) axis */
+    gap: 1rem; /* adding gap to separate the li items a little bit*/
+    margin: 2rem 0; /* 2rem margin on top and bottom */
+}
+
+.footer a {
+    color: #fff; /* set the text color to white for the footer links */
+}
+
+.footer a:hover {
+    color: var(--secondary-color);
+}
+/* Footer - END ----------------------------------------------------- */
+
 /* Media Queries - START ----------------------------------------------------- */
 @media (max-width: 1200px) {
     .hero .hero-flex {
@@ -632,6 +692,27 @@ img {
 
     .info-content p {
         font-size: 1rem; /* making sont size smaller for info paragraph text */
+    }
+
+    .social .social-icons {
+        flex-wrap: wrap; /* wrap content if screen gets too small */
+    }
+
+    .footer {
+        padding: 0.5rem 1rem; /* lighten up the padding on the right and left for smaller screens */
+    }
+
+    .social p {
+        font-size: 1.2rem; /* changing the font size to be smaller for smaller screens */
+    }
+
+    .social i {
+        font-size: 2.5rem;
+    }
+
+    .footer-flex {
+        flex-direction: column; /* column format for smaller screens */
+        text-align: center; /* center the text */
     }
 }
 
